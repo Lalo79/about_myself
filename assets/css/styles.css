@@ -1,3 +1,5 @@
+/* General Styles definitions */
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -13,23 +15,23 @@
     --darkborder: #1f270c;
     --background05: #395000;
     --background04: #5B7814;
-    --background01: #fff4fa;
+    --background01: #fcfff4;
 
     --hoverbckg: rgba(72, 105, 124, 0.6);
     --hovverbordere: #09344E ;
 }
 
+/* Styles for Header Section */
 
 header {
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: column wrap;
 
     justify-content: space-between;
     align-items: center;
     
     width: 100%;
-    padding: 15px;
+    padding: 25px;
     background-color: var(--background05);
     color: var(--fontcolor);
 }
@@ -39,44 +41,48 @@ header h1 {
     background-color: var(--background04);
     border: solid var(--darkborder) 3px;
     padding: 15px 60px 15px 60px;
-    max-width: 500px;
+    min-width: 450px;
 }
 
-
-a {
-    text-decoration-thickness: 3px; 
-}
-
-header div {
-    /* display: inline-block; */
-}
 
 header nav {
     text-align: right;
 }
 
+
 header nav a {
-    color: var(--fontcolor);
     margin: 10px;
+    color: var(--background01);
 }
+
+
+a {
+    text-decoration-thickness: 3px;
+    text-underline-offset: .4rem;
+}
+
+
+/* Styles for Banner Section */
+
 
 .banner {
     position: relative;
     max-width: 1920px;
+    min-width: 600px;
 }
 
 .banner_pic {
     align-items: center;
-    display: flex;
+    object-fit: cover;
     max-width: 1920px;
 }
 
 .profile_pic {
-    max-height: 210px;
-    border: solid white 4px;
+    height: 100%;
+    border-right: solid 10px var(--background01);
     position: absolute;
-    top: 25px;
-    left: 45px;
+    top: 0px;
+    left: 0px;
 }
 
 .banner h2 {
@@ -91,6 +97,7 @@ header nav a {
 }
 
 
+/* Styles for Main Section */
 
 main section {
     display: flex;
@@ -98,12 +105,9 @@ main section {
     background-color: var(--background01);
 }
 
-/* section div {
-    display: inline-block;
-} */
 
 .section_title {
-    width: 15%;
+    width: 10%;
     min-width: 200px;
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -112,16 +116,16 @@ main section {
     font-weight: bold;
     text-align: right;
     border-right: solid var(--background05) 4px;
+
 }
 
+/* Styles Pictures/links in Work sub-section */
 
 .section_content {
     display: flex;
-    justify-content:center;
-    flex-flow: row wrap;
-    width: 75%;
+    flex-flow:wrap;
+    width: 95%;
     min-width: 500px;
-
 }
 
 
@@ -129,26 +133,22 @@ main section {
     padding: 20px;
     text-align: justify;
     line-height: 1.2;
-
-
 }
-
 
 
 .sc01, .sc02 {
     position: relative;
-    display: inline-block;
     border: solid var(--background04) 4px;
     margin: 10px;
 }
 
 .sc01 {
-    flex: 2 2 1000px;
+    flex: 2 2 1200px;
     min-height: 500px;
 }
 
 .sc02 {
-    flex: 2 2 480px;
+    flex: 2 2 550px;
     min-height: 200px;
 }
 
@@ -179,9 +179,11 @@ main section {
     left: 0px;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 
+/* Styles for Contact Me Sub-section */
 
 
 .section_content nav{
@@ -197,15 +199,21 @@ main section {
 }
 
 .section_content nav a {
-
     color: var(--background05);
     font-size: 22px;
+}
 
+/* Styles for Hover Behavior */
+
+.hover_bckg {
+    background-color: var(--hoverbckg);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
 .sc01:hover, .sc02:hover {
-    background-color: var(--hoverbckg);
     border-color: var(--hovverbordere);
     cursor: pointer;
     
@@ -221,24 +229,42 @@ main section {
 }
 
 
+.sc01:hover > .hover_bckg, 
+.sc02:hover > .hover_bckg {
+    opacity: 0.6;
+} 
+
+
+
+/* Styles for screens below 768px resolution */
+
+
 @media screen and (max-width: 768px) {
     
     header {
         flex-direction: column;
+        padding-bottom: 40px;
     }
 
     h1 {
         margin-bottom: 22px;
     }
 
+
+    .banner_pic {
+        max-width: 768px;
+        min-height: 300px;
+        object-fit: cover;
+
+    }
+
+
     main section {
-        display: flex;
         flex-direction: column;
     }
 
     .section_title {
         width: 100%;
-        /* min-width: 200px; */
         padding: 20px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 40px;
@@ -253,15 +279,23 @@ main section {
     .section_content {
         display: flex;
         justify-content:center;
-        /* flex-flow: row wrap; */
         width: 100%;
         min-width: 500px;
     
     }
 
 
+    .section_content nav a{
+        font-size: 16px;
+    }
+
+    .section_content p {
+        text-align: center;
+    }
+
+
+
     .segment_title {
-        /* display: flex; */
 
         height: 70px;
         width: 100%;
@@ -283,9 +317,8 @@ main section {
         font-size: 20px;
     }
 
-    .section_content nav a{
-        font-size: 16px;
-    }
+
+    
 
 
   }
