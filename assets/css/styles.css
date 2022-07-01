@@ -191,6 +191,7 @@ main section {
     flex-flow: row;
     justify-content: space-around;
     align-items:center;
+    padding: 30px;
 
     width: 100%;
     
@@ -261,7 +262,7 @@ main section {
     }
     
     .banner_pic {
-        /* max-width: 100%; */
+        max-width: 100%;
         min-height: 300px;
         object-fit: cover;
 
