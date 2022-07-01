@@ -241,6 +241,10 @@ main section {
 
 @media screen and (max-width: 768px) {
     
+    body {
+        min-width: 600px;
+    }
+
 
     header {
         flex-direction: column;
@@ -252,8 +256,12 @@ main section {
     }
 
 
-    .banner_pic {
+    .banner {
         max-width: 100%;
+    }
+    
+    .banner_pic {
+        /* max-width: 100%; */
         min-height: 300px;
         object-fit: cover;
 
