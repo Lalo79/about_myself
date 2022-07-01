@@ -244,6 +244,7 @@ main section {
     
     body {
         min-width: 600px;
+        max-width: 768px;
     }
 
 
