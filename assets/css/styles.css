@@ -241,6 +241,7 @@ main section {
 
 @media screen and (max-width: 768px) {
     
+
     header {
         flex-direction: column;
         padding-bottom: 40px;
@@ -252,7 +253,7 @@ main section {
 
 
     .banner_pic {
-        max-width: 768px;
+        max-width: 100%;
         min-height: 300px;
         object-fit: cover;
 
