@@ -107,7 +107,7 @@ main section {
 
 
 .section_title {
-    width: 10%;
+    width: 20%;
     min-width: 200px;
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -155,7 +155,7 @@ main section {
 
 .segment_title {
     height: 90px;
-    width: 250px;
+    width: 320px;
 
     position: absolute;
     left: 0px;
